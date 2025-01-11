@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 30, 30, 30;
+  --background-end-rgb: 18, 18, 18;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer base {
+  body {
+    @apply antialiased;
+  }
+}
+
+@layer components {
+  .spotify-button {
+    @apply bg-[#1db954] text-black font-bold py-2 px-4 rounded-full hover:scale-105 transition;
+  }
+}
+
+@font-face {
+  font-family: 'Spotify Mix';
+  src: url('/fonts/Spotify-Mix.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
